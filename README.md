@@ -1,0 +1,1 @@
+https://www.figma.com/design/NIpQ4Ss53oxaOiSSh4COAp/E-Store---Mobile-web--Community-?node-id=2-2&p=f&t=KUZwue3bTSDLO0XP-0

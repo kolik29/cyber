@@ -1,12 +1,35 @@
+=icon($size, $inner-size: null)
+  width: $size
+  height: $size
+  
 .icon
-    width: 24px
-    height: 24px
-    display: flex
-    align-items: center
-    justify-content: center
+  display: flex
+  align-items: center
+  justify-content: center
 
-    &:after
-        content: ''
-        display: block
-        width: 16px
-        height: 16px
+  &:after
+    content: ''
+    display: block
+    width: 100%
+    height: 100%
+    mask-repeat: no-repeat
+    mask-position: center
+
+  &--size
+    &-16
+      @include icon(16px)
+
+    &-24
+      @include icon(24px)
+
+    &-32
+      @include icon(32px)
+
+    &-40
+      @include icon(40px)
+
+    &-48
+      @include icon(48px)
+
+    &-56
+      @include icon(56px)

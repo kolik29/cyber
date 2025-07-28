@@ -1,13 +1,15 @@
-import { useState } from 'react'
 import './App.sass'
-import { Header } from './comonents/Header/Header'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Components } from './pages/components/components'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <Header></Header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/components" element={<Components />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

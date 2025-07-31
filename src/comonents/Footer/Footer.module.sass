@@ -1,0 +1,80 @@
+.footer
+  background-color: #000
+  padding: 104px 0
+  color: #fff
+
+  @media (max-width: 1200px)
+    padding: 48px 0
+
+  &-inner
+    display: grid
+    grid-template-columns: 1fr 0.5fr 0.5fr
+  
+    @media (max-width: 1200px)
+      grid-template-columns: 1fr 1fr
+      row-gap: 25px
+
+    @media (max-width: 768px)
+      grid-template-columns: 1fr
+
+  &-column
+    @media (max-width: 768px)
+      display: flex
+      flex-direction: column
+      align-items: center
+      text-align: center
+
+  &-info
+    display: flex
+    flex-direction: column
+    gap: 24px
+
+    @media (max-width: 1200px)
+      grid-column-start: 1
+      grid-column-end: 3
+    
+    @media (max-width: 768px)
+      grid-column-start: 1
+      grid-column-end: 2
+
+    p
+      max-width: 384px
+      font-size: 14px
+      line-height: 170.5%
+
+  &-menu
+    h3
+      margin: 0 0 24px 0
+      font-size: 16px
+      font-weight: 700
+
+    menu
+      display: flex
+      flex-direction: column
+      gap: 22px
+      font-weight: 400
+
+      a
+        transition: color .3s
+
+        &:hover
+          color: #B5B5B5
+
+  &-social
+    display: flex
+    gap: 24px
+
+    a
+      i:after
+        transition: opacity .3s
+
+      &:hover i:after
+        opacity: 0.75
+
+      @media (max-width: 768px)
+        width: 24px
+        height: 24px
+
+        i
+          width: 24px
+          height: 24px

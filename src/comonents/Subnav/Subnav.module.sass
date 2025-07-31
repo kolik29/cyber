@@ -1,0 +1,38 @@
+.subnav
+  background-color: #2E2E2E
+  overflow-x: auto
+
+  &::-webkit-scrollbar
+    width: 0
+    height: 0
+
+  @media (max-width: 768px)
+    display: none
+
+  &-inner
+    display: flex
+    justify-content: space-between
+    color: #969696
+    padding: 12px 0
+    font-size: 16px
+
+    a
+      display: flex
+      gap: 8px
+      align-items: center
+      transition: color 0.3s
+
+      i:after
+        background-color: #969696
+        transition: background-color 0.3s
+
+      &:hover
+        color: #fff
+
+        i:after
+          background-color: #fff
+
+  &-divider
+    width: 1px
+    height: 24px
+    background-color: #969696

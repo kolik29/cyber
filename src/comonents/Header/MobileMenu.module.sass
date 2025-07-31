@@ -1,0 +1,46 @@
+.mobileMenu
+  &-wrapper
+    width: 40px
+    height: 40px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    &.active
+      .mobileMenu-inner
+        div
+          top: 50%
+
+          &:nth-child(1)
+            transform: translateY(-50%) rotate(45deg)
+
+          &:nth-child(2)
+            opacity: 0
+
+          &:nth-child(3)
+            transform: translateY(-50%) rotate(-45deg)
+
+  &-inner
+    display: flex
+    flex-direction: column
+    width: 24px
+    height: 18px
+    position: relative
+
+    div
+      background-color: #000
+      height: 3px
+      width: 100%
+      position: absolute
+      transition: .3s
+
+      &:nth-child(1)
+        top: 0
+
+      &:nth-child(2)
+        top: 50%
+        transform: translateY(-50%)
+
+      &:nth-child(3)
+        bottom: 0
+        

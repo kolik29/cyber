@@ -1,0 +1,72 @@
+@use "sass:color"
+  
+.button
+  display: flex
+  justify-content: center
+  padding: 0 16px
+  border-radius: 6px
+  cursor: pointer
+  transition: all 0.3s
+
+  div
+    display: flex
+    align-items: center
+    column-gap: 8px
+
+  &--white
+    border: 1px solid #fff
+    color: #fff
+    background: transparent
+
+    &:hover
+      border-color: color.adjust(#fff, $lightness: -30%)
+      color: color.adjust(#fff, $lightness: -30%)
+
+      i:after
+        background-color: color.adjust(#fff, $lightness: -30%)
+
+    i:after
+      background-color: #fff
+
+  &--black
+    border: 1px solid #000
+    color: #fff
+    background: #000
+
+    &:hover
+      border-color: color.adjust(#000, $lightness: 30%)
+      background: color.adjust(#000, $lightness: 30%)
+
+    i:after
+      background-color: #fff
+
+  &--blackStroke
+    border: 1px solid #000
+    color: #000
+    background: transparent
+
+    &:hover
+      border-color: color.adjust(#000, $lightness: 30%)
+      color: color.adjust(#000, $lightness: 30%)
+
+      i:after
+        background-color: color.adjust(#000, $lightness: 30%)
+
+    i:after
+      background-color: #000
+
+  &--large
+    min-width: 150px
+    height: 56px
+
+  &--medium
+    min-width: 150px
+    height: 48px
+
+  &--small
+    min-width: 75px
+    height: 32px
+    font-size: 14px
+
+  i:after
+    transition: all 0.3s

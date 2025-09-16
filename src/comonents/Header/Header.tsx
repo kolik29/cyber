@@ -4,12 +4,13 @@ import { Logo } from './Logo';
 import { Menu } from './Menu';
 import { Icons } from './Icons';
 import { MobileMenu } from './MobileMenu';
+import cn from 'classnames';
 
 export function Header() {
   return (
-    <header className={styles.header}>
+    <header className={cn(styles.header)}>
       <div className="container">
-        <div className={styles['header-inner']}>
+        <div className={cn(styles['header-inner'])}>
           <a href="/"><Logo></Logo></a>
           <Search className={styles.search}></Search>
           <Menu className={styles.menu}></Menu>

@@ -1,9 +1,10 @@
 import type { MainProps } from '../../types/MainProps.types';
 import styles from './Menu.module.sass';
+import cn from 'classnames';
 
 export function Menu({ className = '' }: MainProps) {
   return (
-    <menu className={`${className} ${styles.menu}`}>
+    <menu className={cn(className, styles.menu)}>
       <li>
         <a href="">Home</a>
       </li>

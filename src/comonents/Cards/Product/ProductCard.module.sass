@@ -1,0 +1,44 @@
+.productCard
+  background-color: #fff
+  border-radius: 9px
+  position: relative
+  max-width: 236px
+  display: flex
+  flex-direction: column
+  align-items: center
+  text-align: center
+  padding: 24px 16px
+  cursor: pointer
+
+  &-favorite
+    position: absolute
+    right: 16px
+    top: 16px
+    cursor: pointer
+    
+    i:after
+      transition: background-color 0.3s
+
+    &:hover
+      i:after
+        background-color: #FF0000
+
+  &-image
+    margin-bottom: 16px
+    width: 160px
+    height: 160px
+    object-fit: contain
+
+  &-title
+    display: -webkit-box
+    -webkit-box-orient: vertical
+    -webkit-line-clamp: 2
+    overflow: hidden
+    text-overflow: ellipsis
+    margin-bottom: 16px
+    font-weight: 500
+
+  &-price
+    margin-bottom: 24px
+    font-size: 24px
+    font-weight: 600

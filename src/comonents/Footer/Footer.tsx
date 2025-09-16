@@ -4,13 +4,14 @@ import { IconInstagram } from '../Icons/16/IconInstagram';
 import { IconTikTok } from '../Icons/16/IconTikTok';
 import { IconTwitter } from '../Icons/16/IconTwitter';
 import styles from './Footer.module.sass';
+import cn from 'classnames';
 
 export function Footer() {
   return (
-    <footer className={styles.footer}>
+    <footer className={cn(styles.footer)}>
       <div className="container">
-        <div className={styles['footer-inner']}>
-          <div className={`${styles['footer-column']} ${styles['footer-info']}`}>
+        <div className={cn(styles['footer-inner'])}>
+          <div className={cn(styles['footer-column'], styles['footer-info'])}>
             <a href="/">
               <Logo variant="white"></Logo>
             </a>
@@ -18,7 +19,7 @@ export function Footer() {
               We are a residential interior design firm located in Portland. Our boutique-studio offers more than
             </p>
           </div>
-          <div className={`${styles['footer-column']} ${styles['footer-menu']}`}>
+          <div className={cn(styles['footer-column'], styles['footer-menu'])}>
             <h3>Services</h3>
             <menu>
               <li>
@@ -41,7 +42,7 @@ export function Footer() {
               </li>
             </menu>
           </div>
-          <div className={`${styles['footer-column']} ${styles['footer-menu']}`}>
+          <div className={cn(styles['footer-column'], styles['footer-menu'])}>
             <h3>Services</h3>
             <menu>
               <li>
@@ -64,8 +65,8 @@ export function Footer() {
               </li>
             </menu>
           </div>
-          <div className={styles['footer-column']}>
-            <div className={styles['footer-social']}>
+          <div className={cn(styles['footer-column'])}>
+            <div className={cn(styles['footer-social'])}>
               <a href=""><IconTwitter></IconTwitter></a>
               <a href=""><IconFacebook></IconFacebook></a>
               <a href=""><IconInstagram></IconInstagram></a>

@@ -45,6 +45,12 @@ import { IconGuaranteed } from "../../comonents/Icons/56/IconGuaranteed";
 import { IconStock } from "../../comonents/Icons/56/IconStock";
 import { Footer } from "../../comonents/Footer/Footer";
 import { Subnav } from "../../comonents/Subnav/Subnav";
+import { MobileMenu } from "../../comonents/MobileMenu/MobileMenu";
+import { Text } from "../../comonents/Inputs/Text/Text";
+import { Button } from "../../comonents/Buttons/Button/Button";
+import { ProductCard } from "../../comonents/Cards/Product/ProductCard";
+import { CategoryCard } from "../../comonents/Cards/Category/CategoryCard";
+import { DetailCard } from "../../comonents/Cards/Detail/DetailCard";
 
 export function Components() {
   return (
@@ -123,6 +129,44 @@ export function Components() {
         <IconGuaranteed></IconGuaranteed>
         <IconStock></IconStock>
       </div>
+
+      <h1>Inputs</h1>
+
+      <div className={ styles.inputs }>
+        <Text placeholder="Placeholder" label="Label"></Text>
+        <Text placeholder="Placeholder">
+          <IconView className={styles.iconView}></IconView>
+        </Text>
+      </div>
+
+      <h1>Buttons</h1>
+
+      <div className={ styles.buttons }>
+        <Button>test</Button>
+        <Button type="white" size="medium">test</Button>
+        <Button type="black" size="small">test</Button>
+        <Button>test<IconArrowDown></IconArrowDown></Button>
+      </div>
+
+      <h1>Cards</h1>
+
+      <div className={ styles.cards }>
+        <ProductCard></ProductCard>
+        <CategoryCard text="Phones">
+          <IconPhones48></IconPhones48>
+        </CategoryCard>
+        <DetailCard label="Screen size" value='6.7"'>
+          <IconScreen></IconScreen>
+        </DetailCard>
+      </div>
+
+      <h1>Rating</h1>
+
+      <div className={ styles.rating }>
+        
+      </div>
+
+      <MobileMenu></MobileMenu>
     </>
   );
 }

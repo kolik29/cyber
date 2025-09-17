@@ -51,6 +51,12 @@ import { Button } from "../../comonents/Buttons/Button/Button";
 import { ProductCard } from "../../comonents/Cards/Product/ProductCard";
 import { CategoryCard } from "../../comonents/Cards/Category/CategoryCard";
 import { DetailCard } from "../../comonents/Cards/Detail/DetailCard";
+import { OverallRating } from "../../comonents/Reviews/OverallRating/OverallRating";
+import { DetailRating } from "../../comonents/Reviews/DetailRating/DetailRating";
+import { Comment } from "../../comonents/Reviews/Comment/Comment";
+import { Tabs } from "../../comonents/Inputs/Tabs/Tabs";
+import { Radiobox } from "../../comonents/Inputs/Radiobox/Radiobox";
+import { Checkbox } from "../../comonents/Inputs/Checkbox/Checkbox";
 
 export function Components() {
   return (
@@ -160,10 +166,50 @@ export function Components() {
         </DetailCard>
       </div>
 
-      <h1>Rating</h1>
+      <h1>Reviews</h1>
 
-      <div className={ styles.rating }>
-        
+      <div className={ styles.reviews }>
+        <OverallRating rating={4.1951564} totalValues={125}></OverallRating>
+        <DetailRating star1={0} star2={0} star3={3} star4={6} star5={30}></DetailRating>
+        <Comment
+          avatar='/src/assets/Images/Avatar.JPG'
+          name='John Doe'
+          rating={4.5}
+          date={new Date()}
+          comment='Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, ipsa.'
+          gallery={[
+            { src: '/src/assets/Images/Review_Image1.png', w: 1600, h: 1200, thumb: '/src/assets/Images/Review_Image1.png', alt: 'Side view' },
+            { src: '/src/assets/Images/Review_Image2.png', w: 1600, h: 1200, thumb: '/src/assets/Images/Review_Image2.png' },
+          ]}
+        ></Comment>
+      </div>
+
+      <h1>Tabs</h1>
+
+      <div className={ styles.tabs }>
+        <Tabs tabs={[
+          { value: '128GB', label: '128GB', active: false },
+          { value: '256GB', label: '256GB', active: true },
+          { value: '512GB', label: '512GB', active: true },
+          { value: '1TB', label: '1TB', active: true },
+        ]} type="memory" onChange={(value) => console.log(value)}></Tabs>
+      </div>
+
+      <h1>Checkboxes</h1>
+
+      <div className={ styles.checkboxes }>
+        <Radiobox value="Apple" name="device" onChange={(value) => console.log(value)}>
+          <strong>Apple</strong> <span>128</span>
+        </Radiobox>
+        <Radiobox value="Samsung" name="device" onChange={(value) => console.log(value)}>
+          <strong>Samsung</strong> <span>23</span>
+        </Radiobox>
+        <Checkbox value="Apple" name="device1" onChange={(value) => console.log(value)}>
+          <strong>Apple</strong> <span>128</span>
+        </Checkbox>
+        <Checkbox value="Samsung" name="device1" onChange={(value) => console.log(value)}>
+          <strong>Samsung</strong> <span>23</span>
+        </Checkbox>
       </div>
 
       <MobileMenu></MobileMenu>

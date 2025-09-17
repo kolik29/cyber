@@ -1,4 +1,5 @@
 import './App.sass'
+import 'photoswipe/style.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Components } from './pages/components/components'
 

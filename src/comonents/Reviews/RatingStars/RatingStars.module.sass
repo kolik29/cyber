@@ -1,0 +1,21 @@
+.stars
+  display: flex
+  column-gap: 8px
+
+  .star
+    background: url('../../../assets/Icons/24/Star.svg') center/cover no-repeat
+    width: 24px
+    height: 24px
+    position: relative
+
+    &:after
+      content: ''
+      display: block
+      position: absolute
+      top: 0
+      left: 0
+      background: url('../../../assets/Icons/24/StarFilled.svg') no-repeat
+      background-size: cover
+      height: 24px
+      width: var(--fill, 0%)
+      overflow: hidden

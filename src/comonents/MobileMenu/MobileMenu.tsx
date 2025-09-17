@@ -1,7 +1,6 @@
 import styles from './MobileMenu.module.sass';
 import cn from 'classnames';
 import { useState } from 'react';
-import type { MainProps } from '../../types/MainProps.types';
 import { Search } from '../Inputs/Search/Search';
 import { Menu } from '../Header/Menu';
 import { Icons } from '../Header/Icons';

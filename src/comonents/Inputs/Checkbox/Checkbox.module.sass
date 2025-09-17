@@ -1,0 +1,25 @@
+.container
+  display: inline-flex
+  gap: 8px
+  align-items: center
+  
+.checkbox
+  border-radius: 3px
+  border: 2px solid #000
+  min-width: 24px
+  height: 24px
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &:after
+    display: block
+    width: 100%
+    height: 100%
+    background-color: #000
+    background-image: url('../../../assets/Icons/24/Checkbox.svg')
+    background-repeat: no-repeat
+    background-position: center
+
+input:checked ~ .checkbox:after
+  content: ''

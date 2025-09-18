@@ -1,0 +1,38 @@
+.pagination
+  display: flex
+  align-items: center
+  justify-content: center
+  column-gap: 16px
+
+.list
+  display: flex
+  align-items: center
+  column-gap: 8px
+  padding: 0
+  margin: 0
+
+  li
+    list-style: none
+    padding: 0
+    margin: 0
+
+  .pageNumber
+    width: 32px
+    height: 32px
+    background-color: #f6f6f6
+    color: #000
+    line-height: 32px
+    text-align: center
+    display: block
+    border-radius: 5px
+    font-size: 16px
+    font-weight: 500
+
+    &.active
+      background-color: #000
+      color: #fff
+
+.nav
+  width: 24px
+  height: 24px
+  cursor: pointer

@@ -57,8 +57,16 @@ import { Comment } from "../../comonents/Reviews/Comment/Comment";
 import { Tabs } from "../../comonents/Inputs/Tabs/Tabs";
 import { Radiobox } from "../../comonents/Inputs/Radiobox/Radiobox";
 import { Checkbox } from "../../comonents/Inputs/Checkbox/Checkbox";
+import { Pagination } from "../../comonents/Pagination/Pagination";
+import { PriceRange } from "../../comonents/PriceRange/PriceRange";
+import { useState } from "react";
+import { Spoiler } from "../../comonents/Spoiler/Spoiler";
+import { Quantity } from "../../comonents/Quantity/Quantity";
 
 export function Components() {
+  const [values, setValues] = useState<[number, number]>([1000, 3000]);
+  const [qty, setQty] = useState(1);
+
   return (
     <>
       <h1>Header</h1>
@@ -210,6 +218,32 @@ export function Components() {
         <Checkbox value="Samsung" name="device1" onChange={(value) => console.log(value)}>
           <strong>Samsung</strong> <span>23</span>
         </Checkbox>
+      </div>
+
+      <h1>Pagination</h1>
+
+      <div className={ styles.pagination }>
+        <Pagination page={20} totalPages={50} onChange={(page) => console.log(page)}></Pagination>
+      </div>
+
+      <h1>Price range</h1>
+
+      <div className={ styles.priceRange }>
+        <PriceRange min={0} max={10000} values={values} onChange={setValues}></PriceRange>
+      </div>
+
+      <h1>Section</h1>
+
+      <div className={ styles.section }>
+        <Spoiler title="test">
+          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo amet repudiandae aliquam corrupti incidunt molestiae doloribus earum id, voluptas esse! Distinctio, minus voluptate. Eveniet atque eaque accusamus sint, id reprehenderit.</div>
+        </Spoiler>
+      </div>
+
+      <h1>Quantity</h1>
+
+      <div className={ styles.quantity }>
+        <Quantity value={qty} onChange={setQty}></Quantity>
       </div>
 
       <MobileMenu></MobileMenu>

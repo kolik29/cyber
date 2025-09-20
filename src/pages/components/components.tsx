@@ -62,10 +62,18 @@ import { PriceRange } from "../../comonents/PriceRange/PriceRange";
 import { useState } from "react";
 import { Spoiler } from "../../comonents/Spoiler/Spoiler";
 import { Quantity } from "../../comonents/Quantity/Quantity";
+import { Product } from "../../comonents/Cart/Product/Product";
+import { SummaryProduct } from "../../comonents/Cart/SummaryProduct/SummaryProduct";
+
+import img from '../../assets/Images/iphone-14-pro.png';
+import { Steps } from "../../comonents/Cart/Steps/Steps";
+import { Address } from "../../comonents/Cart/Address/Address";
+import { ShippingMethod } from "../../comonents/Cart/ShippingMethod/ShippingMethod";
 
 export function Components() {
   const [values, setValues] = useState<[number, number]>([1000, 3000]);
   const [qty, setQty] = useState(1);
+  const [shipping, setShipping] = useState<string>('shipping1');
 
   return (
     <>
@@ -147,8 +155,8 @@ export function Components() {
       <h1>Inputs</h1>
 
       <div className={ styles.inputs }>
-        <Text placeholder="Placeholder" label="Label"></Text>
-        <Text placeholder="Placeholder">
+        <Text placeholder="Placeholder" label="Label" name="test1" value="Value"></Text>
+        <Text placeholder="Placeholder" name="test2" value="Value">
           <IconView className={styles.iconView}></IconView>
         </Text>
       </div>
@@ -165,7 +173,7 @@ export function Components() {
       <h1>Cards</h1>
 
       <div className={ styles.cards }>
-        <ProductCard></ProductCard>
+        <ProductCard id={1} img={img} title="iPhone 14 Pro" price={1299}></ProductCard>
         <CategoryCard text="Phones">
           <IconPhones48></IconPhones48>
         </CategoryCard>
@@ -244,6 +252,53 @@ export function Components() {
 
       <div className={ styles.quantity }>
         <Quantity value={qty} onChange={setQty}></Quantity>
+      </div>
+
+      <h1>Added Product</h1>
+
+      <div className={ styles.addedProduct }>
+        <Product id={1} img={img} title="Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)" article="MQ9T3RX/A" quantity={1} price={1399}></Product>
+        <SummaryProduct id={1} img={img} title="Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)" price={1399}></SummaryProduct>
+      </div>
+
+      <h1>Steps</h1>
+
+      <div className={ styles.steps }>
+        <Steps number={1} title="Address">
+          <IconLocation></IconLocation>
+        </Steps>
+      </div>
+
+      <h1>Address</h1>
+
+      <div className={ styles.address }>
+        <Address name="John Doe" label="Home" addressLine1="123 Main St" addressLine2="Anytown, USA" state="CA" city="San Francisco" phone="+1 (123) 456-7890"></Address>
+      </div>
+
+      <h1>Shipping Method</h1>
+
+      <div className={ styles.shippingMethod }>
+        <ShippingMethod
+          id="shipping1"
+          value="shipping1"
+          name="shipping"
+          title="Shipping 1"
+          price="$8.50"
+          date="28 Jan, 2023"
+          selected={shipping === 'shipping1'}
+          onChange={setShipping}
+        />
+
+        <ShippingMethod
+          id="shipping2"
+          value="shipping2"
+          name="shipping"
+          title="Shipping 2"
+          price="$50"
+          date="28 Jan, 2023"
+          selected={shipping === 'shipping2'}
+          onChange={setShipping}
+        />
       </div>
 
       <MobileMenu></MobileMenu>

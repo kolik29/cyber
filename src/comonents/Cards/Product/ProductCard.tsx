@@ -1,9 +1,11 @@
 import styles from './ProductCard.module.sass';
-import img from '../../../assets/Images/iphone-14-pro.png';
 import { Button } from '../../Buttons/Button/Button';
 import { IconFavorite } from '../../Icons/32/IconFavorite';
 
-export function ProductCard() {
+export const ProductCard = (
+  { id, img, title, price }:
+  { id: number, img: string, title: string, price: number }
+) => {
 
   return (
     <div className={styles.productCard}>
@@ -14,10 +16,10 @@ export function ProductCard() {
         <img src={ img } alt="" />
       </div>
       <div className={styles['productCard-title']}>
-        Apple iPhone 14 Pro Max 128GB Deep Purple (MQ9T3RX/A)
+        {title}
       </div>
       <div className={styles['productCard-price']}>
-        $1399
+        ${price}
       </div>
       <div className={styles['productCard-button']}>
         <Button type="black" size="medium">Buy Now</Button>

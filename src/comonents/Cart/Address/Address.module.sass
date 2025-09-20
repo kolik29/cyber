@@ -1,0 +1,77 @@
+.address
+  display: grid
+  grid-template-columns: auto 1fr auto
+  gap: 16px
+  background-color: #fff
+  border-radius: 7px
+  padding: 24px
+
+  .info
+    .name
+      font-size: 18px
+      line-height: 24px
+      margin-bottom: 16px
+      display: flex
+      align-items: center
+      column-gap: 24px
+
+      .label
+        background-color: #000
+        color: #fff
+        padding: 0 8px
+        border-radius: 4px
+        font-size: 12px
+        font-weight: 500
+        line-height: 22px
+        text-transform: uppercase
+
+    .lines
+      margin-bottom: 8px
+
+    .lines,
+    .phone
+      font-size: 16px
+      line-height: 24px
+
+  .actions
+    display: flex
+    row-gap: 24px
+
+    button
+      cursor: pointer
+      border: none
+      background-color: unset
+        
+      i:after
+        transition: background-color 0.3s
+
+      &.edit:hover
+        i:after
+          background-color: #B5B5B5
+
+      &.delete:hover
+        i:after
+          background-color: #ff0000
+
+.modal
+  display: grid
+  gap: 16px
+
+  .name
+    display: grid
+    gap: 16px
+    grid-template-columns: 1fr 30%
+
+    .label
+      display: flex
+      align-items: flex-end
+
+      > div
+        flex: 1
+        
+        button
+          width: 100%
+
+  .locality
+    display: flex
+    gap: 16px

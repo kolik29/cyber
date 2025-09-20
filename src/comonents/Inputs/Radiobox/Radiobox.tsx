@@ -1,14 +1,38 @@
 import styles from './Radiobox.module.sass';
 
-export const Radiobox = ({ value, name, onChange, children }: { value: string, name: string, onChange: (value: string) => void, children: React.ReactNode }) => {
-  const id = `${name}-${value}`;
+type RadioboxProps = {
+  id?: string;
+  value: string;
+  name: string;
+  selected?: boolean;
+  onChange: (value: string) => void;
+  children?: React.ReactNode;
+};
+
+export const Radiobox = ({
+  id,
+  value,
+  name,
+  selected = false,
+  onChange,
+  children,
+}: RadioboxProps) => {
+  const inputId = id ?? `${name}-${value}`;
 
   return (
-    <div className={ styles.container }>
-      <input type="radio" id={ id } value={ value } name={ name } onChange={ () => onChange(value) } hidden />
-      <label htmlFor={ id } className={ styles.radiobox }></label>
-      <label htmlFor={ id }>
-        { children }
+    <div className={styles.container}>
+      <input
+        type="radio"
+        id={inputId}
+        name={name}
+        value={value}
+        checked={selected}
+        onChange={() => onChange(value)}
+        className={styles.input}
+      />
+      <label htmlFor={inputId} className={styles.radiobox} />
+      <label htmlFor={inputId}>
+        {children}
       </label>
     </div>
   );

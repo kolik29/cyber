@@ -5,6 +5,12 @@
 
   label
     cursor: pointer
+
+  input
+    display: none
+    
+    &:checked ~ .radiobox:after
+      content: ''
   
 .radiobox
   border-radius: 999px
@@ -21,9 +27,3 @@
     height: 12px
     border-radius: 999px
     background-color: #000
-
-  input
-    display: none
-    
-    &:checked ~ .radiobox:after
-      content: ''

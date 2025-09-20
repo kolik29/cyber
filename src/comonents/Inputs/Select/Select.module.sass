@@ -1,0 +1,97 @@
+.select
+  display: grid
+  row-gap: 8px
+  width: 100%
+
+.label
+  line-height: 16px
+  color: #545454
+  font-size: 14px
+
+.select-inner
+  position: relative
+  display: grid
+  grid-template-columns: 1fr auto
+  align-items: center
+  padding: 16px
+  border: 1px solid #9F9F9F
+  border-radius: 7px
+  background: #fff
+  cursor: pointer
+  transition: border-color .15s ease, box-shadow .15s ease
+  &:hover
+    border-color: #7f7f7f
+  &:focus-within
+    border-color: #4a90e2
+    box-shadow: 0 0 0 2px rgba(74,144,226,.15)
+  &.open .chevron i
+    transform: rotate(180deg)
+  &.disabled
+    opacity: .6
+    cursor: not-allowed
+
+.value
+  min-width: 0
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+  font-size: 16px
+  line-height: 20px
+  color: #1d1d1d
+
+.placeholder
+  color: #9F9F9F
+
+.chevron i
+  transition: .3s
+
+.dropdown
+  position: absolute
+  top: calc(100% + 8px)
+  left: 0
+  right: 0
+  background: #fff
+  border: 1px solid #E0E0E0
+  border-radius: 7px
+  box-shadow: 0 2px 12px rgba(0,0,0,.08)
+  z-index: 10
+
+.search
+  padding: 8px
+  border-bottom: 1px solid #eee
+
+.options
+  max-height: 240px
+  overflow: auto
+  padding: 8px 0
+  margin: 0
+
+.option
+  padding: 10px 16px
+  font-size: 16px
+  line-height: 22px
+  color: #1d1d1d
+  cursor: pointer
+
+  &:hover
+    background: #f5f7fa
+
+.selected
+  background: #eef5ff
+
+.noResults
+  padding: 10px 16px
+  color: #999
+  cursor: default
+
+.inputValue
+  border: none
+  outline: none
+  font-size: 16px
+  line-height: 20px
+  color: #1d1d1d
+  background: transparent
+  width: 100%
+
+  &::placeholder
+    color: #9F9F9F

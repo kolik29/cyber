@@ -1,7 +1,7 @@
 import styles from './MobileMenu.module.sass';
 import cn from 'classnames';
 import { useState } from 'react';
-import { Search } from '../Inputs/Search/Search';
+import { Search } from '../../components/Inputs/Search/Search';
 import { Menu } from '../Header/Menu';
 import { Icons } from '../Header/Icons';
 

@@ -1,10 +1,11 @@
 import { Logo } from '../Header/Logo';
-import { IconFacebook } from '../Icons/16/IconFacebook';
-import { IconInstagram } from '../Icons/16/IconInstagram';
-import { IconTikTok } from '../Icons/16/IconTikTok';
-import { IconTwitter } from '../Icons/16/IconTwitter';
+import { IconFacebook } from '../../components/Icons/16/IconFacebook';
+import { IconInstagram } from '../../components/Icons/16/IconInstagram';
+import { IconTikTok } from '../../components/Icons/16/IconTikTok';
+import { IconTwitter } from '../../components/Icons/16/IconTwitter';
 import styles from './Footer.module.sass';
 import cn from 'classnames';
+import { Link } from 'react-router-dom';
 
 export function Footer() {
   return (
@@ -12,9 +13,9 @@ export function Footer() {
       <div className="container">
         <div className={cn(styles['footer-inner'])}>
           <div className={cn(styles['footer-column'], styles['footer-info'])}>
-            <a href="/">
+            <Link to="/">
               <Logo variant="white"></Logo>
-            </a>
+            </Link>
             <p>
               We are a residential interior design firm located in Portland. Our boutique-studio offers more than
             </p>
@@ -23,22 +24,22 @@ export function Footer() {
             <h3>Services</h3>
             <menu>
               <li>
-                <a href="">Bonus program</a>
+                <Link to="">Bonus program</Link>
               </li>
               <li>
-                <a href="">Gift cards</a>
+                <Link to="">Gift cards</Link>
               </li>
               <li>
-                <a href="">Credit and payment</a>
+                <Link to="">Credit and payment</Link>
               </li>
               <li>
-                <a href="">Service contracts</a>
+                <Link to="">Service contracts</Link>
               </li>
               <li>
-                <a href="">Non-cash account</a>
+                <Link to="">Non-cash account</Link>
               </li>
               <li>
-                <a href="">Payment</a>
+                <Link to="">Payment</Link>
               </li>
             </menu>
           </div>
@@ -46,31 +47,31 @@ export function Footer() {
             <h3>Services</h3>
             <menu>
               <li>
-                <a href="">Find an order</a>
+                <Link to="">Find an order</Link>
               </li>
               <li>
-                <a href="">Terms of delivery</a>
+                <Link to="">Terms of delivery</Link>
               </li>
               <li>
-                <a href="">Exchange and return of goods</a>
+                <Link to="">Exchange and return of goods</Link>
               </li>
               <li>
-                <a href="">Guarantee</a>
+                <Link to="">Guarantee</Link>
               </li>
               <li>
-                <a href="">Frequently asked questions</a>
+                <Link to="">Frequently asked questions</Link>
               </li>
               <li>
-                <a href="">Terms of use of the site</a>
+                <Link to="">Terms of use of the site</Link>
               </li>
             </menu>
           </div>
           <div className={cn(styles['footer-column'])}>
             <div className={cn(styles['footer-social'])}>
-              <a href=""><IconTwitter></IconTwitter></a>
-              <a href=""><IconFacebook></IconFacebook></a>
-              <a href=""><IconInstagram></IconInstagram></a>
-              <a href=""><IconTikTok></IconTikTok></a>
+              <Link to=""><IconTwitter></IconTwitter></Link>
+              <Link to=""><IconFacebook></IconFacebook></Link>
+              <Link to=""><IconInstagram></IconInstagram></Link>
+              <Link to=""><IconTikTok></IconTikTok></Link>
             </div>
           </div>
         </div>

@@ -1,79 +1,81 @@
-import { Header } from "../../comonents/Header/Header";
-import { IconFacebook } from "../../comonents/Icons/16/IconFacebook";
-import { IconInstagram } from "../../comonents/Icons/16/IconInstagram";
-import { IconTikTok } from "../../comonents/Icons/16/IconTikTok";
-import { IconTwitter } from "../../comonents/Icons/16/IconTwitter";
-import { IconAdd } from "../../comonents/Icons/24/IconAdd";
-import { IconArrowDown } from "../../comonents/Icons/24/IconArrowDown";
-import { IconArrowRight } from "../../comonents/Icons/24/IconArrowRight";
-import { IconBattery } from "../../comonents/Icons/24/IconBattery";
-import { IconCameras } from "../../comonents/Icons/24/IconCameras";
-import { IconClose } from "../../comonents/Icons/24/IconClose";
-import { IconComputers } from "../../comonents/Icons/24/IconComputers";
-import { IconCores } from "../../comonents/Icons/24/IconCores";
-import { IconCPU } from "../../comonents/Icons/24/IconCPU";
-import { IconDelete } from "../../comonents/Icons/24/IconDelete";
-import { IconEdit } from "../../comonents/Icons/24/IconEdit";
-import { IconFrontCamera } from "../../comonents/Icons/24/IconFrontCamera";
-import { IconGaming } from "../../comonents/Icons/24/IconGaming";
-import { IconHeadphones } from "../../comonents/Icons/24/IconHeadphones";
-import { IconLocation } from "../../comonents/Icons/24/IconLocation";
-import { IconMainCamera } from "../../comonents/Icons/24/IconMainCamera";
-import { IconPayment } from "../../comonents/Icons/24/IconPayment";
-import { IconPhones } from "../../comonents/Icons/24/IconPhones";
-import { IconPlus } from "../../comonents/Icons/24/IconPlus";
-import { IconScreen } from "../../comonents/Icons/24/IconScreen";
-import { IconSearch } from "../../comonents/Icons/24/IconSearch";
-import { IconSettings } from "../../comonents/Icons/24/IconSettings";
-import { IconShipping } from "../../comonents/Icons/24/IconShipping";
-import { IconSmartWatches } from "../../comonents/Icons/24/IconSmartWatches";
-import { IconView } from "../../comonents/Icons/24/IconView";
-import { IconArrowLeft } from "../../comonents/Icons/32/IconArrowLeft";
-import { IconCart } from "../../comonents/Icons/32/IconCart";
-import { IconFavorite } from "../../comonents/Icons/32/IconFavorite";
-import { IconPerson } from "../../comonents/Icons/32/IconPerson";
-import { IconComputers as IconComputers48 } from "../../comonents/Icons/48/IconComputers";
-import { IconPhones as IconPhones48 } from "../../comonents/Icons/48/IconPhones";
-import { IconCameras as IconCameras48 } from "../../comonents/Icons/48/IconCameras";
-import { IconHeadphones as IconHeadphones48 } from "../../comonents/Icons/48/IconHeadphones";
-import { IconGaming as IconGaming48 } from "../../comonents/Icons/48/IconGaming";
-import { IconSmartWatches as IconSmartWatches48 } from "../../comonents/Icons/48/IconSmartWatches";
+import { Header } from "../../widgets/Header/Header";
+import { IconFacebook } from "../../components/Icons/16/IconFacebook";
+import { IconInstagram } from "../../components/Icons/16/IconInstagram";
+import { IconTikTok } from "../../components/Icons/16/IconTikTok";
+import { IconTwitter } from "../../components/Icons/16/IconTwitter";
+import { IconAdd } from "../../components/Icons/24/IconAdd";
+import { IconArrowDown } from "../../components/Icons/24/IconArrowDown";
+import { IconArrowRight } from "../../components/Icons/24/IconArrowRight";
+import { IconBattery } from "../../components/Icons/24/IconBattery";
+import { IconCameras } from "../../components/Icons/24/IconCameras";
+import { IconClose } from "../../components/Icons/24/IconClose";
+import { IconComputers } from "../../components/Icons/24/IconComputers";
+import { IconCores } from "../../components/Icons/24/IconCores";
+import { IconCPU } from "../../components/Icons/24/IconCPU";
+import { IconDelete } from "../../components/Icons/24/IconDelete";
+import { IconEdit } from "../../components/Icons/24/IconEdit";
+import { IconFrontCamera } from "../../components/Icons/24/IconFrontCamera";
+import { IconGaming } from "../../components/Icons/24/IconGaming";
+import { IconHeadphones } from "../../components/Icons/24/IconHeadphones";
+import { IconLocation } from "../../components/Icons/24/IconLocation";
+import { IconMainCamera } from "../../components/Icons/24/IconMainCamera";
+import { IconPayment } from "../../components/Icons/24/IconPayment";
+import { IconPhones } from "../../components/Icons/24/IconPhones";
+import { IconPlus } from "../../components/Icons/24/IconPlus";
+import { IconScreen } from "../../components/Icons/24/IconScreen";
+import { IconSearch } from "../../components/Icons/24/IconSearch";
+import { IconSettings } from "../../components/Icons/24/IconSettings";
+import { IconShipping } from "../../components/Icons/24/IconShipping";
+import { IconSmartWatches } from "../../components/Icons/24/IconSmartWatches";
+import { IconView } from "../../components/Icons/24/IconView";
+import { IconArrowLeft } from "../../components/Icons/32/IconArrowLeft";
+import { IconCart } from "../../components/Icons/32/IconCart";
+import { IconFavorite } from "../../components/Icons/32/IconFavorite";
+import { IconPerson } from "../../components/Icons/32/IconPerson";
+import { IconComputers as IconComputers48 } from "../../components/Icons/48/IconComputers";
+import { IconPhones as IconPhones48 } from "../../components/Icons/48/IconPhones";
+import { IconCameras as IconCameras48 } from "../../components/Icons/48/IconCameras";
+import { IconHeadphones as IconHeadphones48 } from "../../components/Icons/48/IconHeadphones";
+import { IconGaming as IconGaming48 } from "../../components/Icons/48/IconGaming";
+import { IconSmartWatches as IconSmartWatches48 } from "../../components/Icons/48/IconSmartWatches";
 
 import styles from './components.module.sass';
-import { IconDelivery } from "../../comonents/Icons/56/IconDelivery";
-import { IconGuaranteed } from "../../comonents/Icons/56/IconGuaranteed";
-import { IconStock } from "../../comonents/Icons/56/IconStock";
-import { Footer } from "../../comonents/Footer/Footer";
-import { Subnav } from "../../comonents/Subnav/Subnav";
-import { MobileMenu } from "../../comonents/MobileMenu/MobileMenu";
-import { Text } from "../../comonents/Inputs/Text/Text";
-import { Button } from "../../comonents/Buttons/Button/Button";
-import { ProductCard } from "../../comonents/Cards/Product/ProductCard";
-import { CategoryCard } from "../../comonents/Cards/Category/CategoryCard";
-import { DetailCard } from "../../comonents/Cards/Detail/DetailCard";
-import { OverallRating } from "../../comonents/Reviews/OverallRating/OverallRating";
-import { DetailRating } from "../../comonents/Reviews/DetailRating/DetailRating";
-import { Comment } from "../../comonents/Reviews/Comment/Comment";
-import { Tabs } from "../../comonents/Inputs/Tabs/Tabs";
-import { Radiobox } from "../../comonents/Inputs/Radiobox/Radiobox";
-import { Checkbox } from "../../comonents/Inputs/Checkbox/Checkbox";
-import { Pagination } from "../../comonents/Pagination/Pagination";
-import { PriceRange } from "../../comonents/PriceRange/PriceRange";
+import { IconDelivery } from "../../components/Icons/56/IconDelivery";
+import { IconGuaranteed } from "../../components/Icons/56/IconGuaranteed";
+import { IconStock } from "../../components/Icons/56/IconStock";
+import { Footer } from "../../widgets/Footer/Footer";
+import { Subnav } from "../../components/Subnav/Subnav";
+import { MobileMenu } from "../../widgets/MobileMenu/MobileMenu";
+import { Text } from "../../components/Inputs/Text/Text";
+import { Button } from "../../components/Buttons/Button/Button";
+import { ProductCard } from "../../components/Cards/Product/ProductCard";
+import { CategoryCard } from "../../components/Cards/Category/CategoryCard";
+import { DetailCard } from "../../components/Cards/Detail/DetailCard";
+import { OverallRating } from "../../components/Reviews/OverallRating/OverallRating";
+import { DetailRating } from "../../components/Reviews/DetailRating/DetailRating";
+import { Comment } from "../../components/Reviews/Comment/Comment";
+import { Tabs } from "../../components/Inputs/Tabs/Tabs";
+import { Radiobox } from "../../components/Inputs/Radiobox/Radiobox";
+import { Checkbox } from "../../components/Inputs/Checkbox/Checkbox";
+import { Pagination } from "../../components/Pagination/Pagination";
+import { PriceRange } from "../../components/PriceRange/PriceRange";
 import { useState } from "react";
-import { Spoiler } from "../../comonents/Spoiler/Spoiler";
-import { Quantity } from "../../comonents/Quantity/Quantity";
-import { Product } from "../../comonents/Cart/Product/Product";
-import { SummaryProduct } from "../../comonents/Cart/SummaryProduct/SummaryProduct";
+import { Spoiler } from "../../components/Spoiler/Spoiler";
+import { Quantity } from "../../components/Quantity/Quantity";
+import { Product } from "../../components/Cart/Product/Product";
+import { SummaryProduct } from "../../components/Cart/SummaryProduct/SummaryProduct";
 
 import img from '../../assets/Images/iphone-14-pro.png';
-import { Steps } from "../../comonents/Cart/Steps/Steps";
-import { Address } from "../../comonents/Cart/Address/Address";
-import { ShippingMethod } from "../../comonents/Cart/ShippingMethod/ShippingMethod";
+import { Steps } from "../../components/Cart/Steps/Steps";
+import { Address } from "../../components/Cart/Address/Address";
+import { ShippingMethod } from "../../components/Cart/ShippingMethod/ShippingMethod";
+import { AddNewAddress } from "../../components/Cart/AddNewAddress/AddNewAddress";
 
 export function Components() {
   const [values, setValues] = useState<[number, number]>([1000, 3000]);
   const [qty, setQty] = useState(1);
   const [shipping, setShipping] = useState<string>('shipping1');
+  const [device, setDevice] = useState<string>('apple');
 
   return (
     <>
@@ -214,10 +216,22 @@ export function Components() {
       <h1>Checkboxes</h1>
 
       <div className={ styles.checkboxes }>
-        <Radiobox value="Apple" name="device" onChange={(value) => console.log(value)}>
+        <Radiobox
+          id={'apple'}
+          value={'apple'}
+          name={'device'}
+          selected={device === 'apple'}
+          onChange={(value) => setDevice(value)}
+        >
           <strong>Apple</strong> <span>128</span>
         </Radiobox>
-        <Radiobox value="Samsung" name="device" onChange={(value) => console.log(value)}>
+        <Radiobox
+          id={'samsung'}
+          value={'samsung'}
+          name={'device'}
+          selected={device === 'samsung'}
+          onChange={(value) => setDevice(value)}
+        >
           <strong>Samsung</strong> <span>23</span>
         </Radiobox>
         <Checkbox value="Apple" name="device1" onChange={(value) => console.log(value)}>
@@ -299,6 +313,12 @@ export function Components() {
           selected={shipping === 'shipping2'}
           onChange={setShipping}
         />
+      </div>
+
+      <h1>AddNewAddress</h1>
+
+      <div className={ styles.addNewAddress }>
+        <AddNewAddress></AddNewAddress>
       </div>
 
       <MobileMenu></MobileMenu>

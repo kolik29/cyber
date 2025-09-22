@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { IconCameras } from '../Icons/24/IconCameras';
 import { IconComputers } from '../Icons/24/IconComputers';
 import { IconGaming } from '../Icons/24/IconGaming';
@@ -11,35 +12,35 @@ export function Subnav() {
     <div className={styles.subnav}>
       <div className="container">
         <div className={styles['subnav-inner']}>
-          <a href="">
+          <Link to="">
             <IconPhones></IconPhones>
             <span>Phones</span>
-          </a>
+          </Link>
           <div className={styles['subnav-divider']}></div>
-          <a href="">
+          <Link to="">
             <IconComputers></IconComputers>
             <span>Computers</span>
-          </a>
+          </Link>
           <div className={styles['subnav-divider']}></div>
-          <a href="">
+          <Link to="">
             <IconSmartWatches></IconSmartWatches>
             <span>Smart Watches</span>
-          </a>
+          </Link>
           <div className={styles['subnav-divider']}></div>
-          <a href="">
+          <Link to="">
             <IconCameras></IconCameras>
             <span>Cameras</span>
-          </a>
+          </Link>
           <div className={styles['subnav-divider']}></div>
-          <a href="">
+          <Link to="">
             <IconHeadphones></IconHeadphones>
             <span>Headphones</span>
-          </a>
+          </Link>
           <div className={styles['subnav-divider']}></div>
-          <a href="">
+          <Link to="">
             <IconGaming></IconGaming>
             <span>Gaming</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
